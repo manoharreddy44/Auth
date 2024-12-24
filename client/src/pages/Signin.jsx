@@ -29,7 +29,7 @@ export default function Signin() {
         const data = await res.json();
        
         if (data.success === false) {
-          dispatch(signInFailure(data));
+          dispatch(signInFailure({ message: 'Credentials are wrong' }));
           return;
         }
         dispatch(signInSuccess(data));
