@@ -26,7 +26,6 @@ export default function OAuth() {
       console.log(data);
       dispatch(signInSuccess(data));
       navigate('/');
-
     } catch (error) {
       console.log('could not login with google', error);
     }
