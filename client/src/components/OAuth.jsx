@@ -23,6 +23,8 @@ export default function OAuth() {
           photo: result.user.photoURL,
         }),
       });
+
+      const data = await res.json();
       console.log(data);
       dispatch(signInSuccess(data));
       navigate('/');
